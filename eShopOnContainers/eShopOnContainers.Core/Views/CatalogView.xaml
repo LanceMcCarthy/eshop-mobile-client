@@ -8,7 +8,9 @@
              xmlns:animations="clr-namespace:eShopOnContainers.Core.Animations;assembly=eShopOnContainers.Core"
              xmlns:triggers="clr-namespace:eShopOnContainers.Core.Triggers;assembly=eShopOnContainers.Core"
              xmlns:behaviors="clr-namespace:eShopOnContainers.Core.Behaviors;assembly=eShopOnContainers.Core"
-			 viewModelBase:ViewModelLocator.AutoWireViewModel="true"
+             xmlns:dataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             viewModelBase:ViewModelLocator.AutoWireViewModel="true"
              Title="Catalog">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -32,7 +34,7 @@
                 <Setter Property="VerticalOptions"
                         Value="Center" />
             </Style>
-            
+
             <animations:StoryBoard 
                 x:Key="ProductsAnimation"    
                 Target="{x:Reference Products}">
@@ -41,7 +43,7 @@
                     Duration="1500"
                     Delay="250"/>
             </animations:StoryBoard>
-            
+
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Triggers>
@@ -81,7 +83,19 @@
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>
             </Grid>
-            <ListView 
+
+            <!-- TELERIK DATAGRID TEST -->
+            <dataGrid:RadDataGrid ItemsSource="{Binding Products}" AutoGenerateColumns="False">
+                <dataGrid:RadDataGrid.Columns>
+                    <dataGrid:DataGridTextColumn PropertyName="Name"
+                                                 HeaderText="Name"/>
+                    <dataGrid:DataGridTextColumn PropertyName="Price"
+                                                 HeaderText="Price"/>
+                </dataGrid:RadDataGrid.Columns>
+            </dataGrid:RadDataGrid>
+
+            <!-- ORIGINAL -->
+            <!--<ListView 
                 x:Name="Products"       
                 IsVisible="{Binding Products.Count, Converter={StaticResource CountToBoolConverter}}"
                 ItemsSource="{Binding Products}"
@@ -102,7 +116,8 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView>-->
+
         </Grid>
         <!-- INDICATOR -->
         <ActivityIndicator
