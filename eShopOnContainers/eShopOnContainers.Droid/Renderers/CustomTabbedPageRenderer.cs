@@ -1,7 +1,5 @@
 using Android.Content;
 using Android.Graphics;
-using Android.Support.Design.Widget;
-using Android.Support.V4.View;
 using Android.Views;
 using Android.Widget;
 using eShopOnContainers.Core.Controls;
@@ -10,6 +8,8 @@ using eShopOnContainers.Droid.Renderers;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using AndroidX.ViewPager.Widget;
+using Google.Android.Material.Tabs;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;

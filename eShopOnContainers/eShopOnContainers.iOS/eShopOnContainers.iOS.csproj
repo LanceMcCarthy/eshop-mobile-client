@@ -103,13 +103,16 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.673156" />
-    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.3.4" />
+    <PackageReference Include="Telerik.UI.for.Xamarin">
+      <Version>2021.2.721.1-hotfix</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="SlideOverKit" Version="2.1.6.2" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="PCLCrypto" Version="2.0.147" />
     <PackageReference Include="IdentityModel" Version="3.0.0" />
-    <PackageReference Include="Acr.UserDialogs" Version="7.0.4" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.514" />
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
   </ItemGroup>
   <ItemGroup>

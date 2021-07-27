@@ -6,10 +6,10 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using FFImageLoading;
-using FFImageLoading.Forms.Droid;
 using System;
 using Xamarin.Forms.Platform.Android;
 using eShopOnContainers.Droid.Services;
+using FFImageLoading.Forms.Platform;
 
 namespace eShopOnContainers.Droid.Activities
 {

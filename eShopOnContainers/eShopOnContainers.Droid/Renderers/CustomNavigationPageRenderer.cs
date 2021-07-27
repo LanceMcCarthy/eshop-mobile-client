@@ -22,16 +22,18 @@ namespace eShopOnContainers.Droid.Renderers
                 return;
             }
 
-            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            var toolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.toolbar);
 
             if (toolbar != null)
             {
                 var image = toolbar.FindViewById<ImageView>(Resource.Id.toolbar_image);
 
-                if (!string.IsNullOrEmpty(Element.CurrentPage.Title))
-                    image.Visibility = Android.Views.ViewStates.Invisible;
-                else
-                    image.Visibility = Android.Views.ViewStates.Visible;
+                if (image != null)
+                {
+                    image.Visibility = !string.IsNullOrEmpty(Element.CurrentPage.Title) 
+                        ? Android.Views.ViewStates.Invisible 
+                        : Android.Views.ViewStates.Visible;
+                }
             }
         }
     }
